@@ -1,0 +1,3 @@
+[bindings.kotlin]
+package_name = "io.legado.app.rust"
+cdylib_name = "legado_uniffi"

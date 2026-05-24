@@ -1,0 +1,11 @@
+/target/
+/.legado-cli/
+sources/
+sync.sh
+.env
+export-patch.bat
+update.patch
+/legacy/
+AGENTS.md
+.agents
+build.sh

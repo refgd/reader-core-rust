@@ -1,0 +1,11 @@
+[package]
+name = "legado-cli"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+legado-runtime = { path = "../legado-runtime" }
+serde_json.workspace = true

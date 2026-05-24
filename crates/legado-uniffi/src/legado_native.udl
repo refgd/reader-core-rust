@@ -1,0 +1,44 @@
+callback interface PlatformHost {
+  string handle_platform_action(string api, string source_name, string args_json);
+};
+
+namespace legado_native {
+  string configure_persistent_store(string storage_dir);
+  string effective_domain(string url);
+  string fetch_raw_json(string source_json, string url);
+  string html_text_array_json(string html);
+  string html_charset_json(string html);
+  string html_format_json(string html);
+  string html_title_json(string html);
+  string html_first_alignment_json(string html);
+  string epub_native_entry_json(string html);
+  string epub_readable_title_json(string html);
+  string epub_book_info_json(string html);
+  string epub_footnote_ids_json(string html);
+  string epub_footnote_target_json(string html, string target_id);
+  string epub_readable_lines_json(string html, boolean delete_ruby);
+  string epub_body_html_json(string html, string start_fragment_id, string end_fragment_id);
+  string epub_debug_chapter_html_json(string bodies_json, boolean delete_ruby);
+  string epub_image_options_json(string html);
+  string epub_image_page_marks_json(string html);
+  string epub_materialized_images_json(string html, string base_href, string resource_hrefs_json);
+  string epub_media_placeholders_json(string html, string base_href);
+  string epub_inline_styles_json(string html, string body_style);
+  string epub_inherited_styles_json(string html, string body_style);
+  string epub_generated_content_json(string body_outer_html, string rules_json);
+  string epub_native_dom_json(string body_outer_html, string rules_json, string base_href);
+  string epub_applied_css_json(string body_outer_html, string rules_json);
+  string epub_resolved_links_json(string html, string base_href);
+  string epub_body_background_image_json(string body_style, string body_background);
+  string epub_css_assets_json(string document_html, string body_html);
+  string html_readable_table_json(string html);
+  string html_render_flags_json(string html);
+  string html_page_background_json(string html);
+  string html_image_info_json(string html);
+  string html_render_plan_json(string html, boolean classic_epub);
+  string mobi_content_html_json(string html, boolean rewrite_recindex_images);
+  string parse_webdav_listing_json(string body, string request_url, string original_path);
+  string parse_webdav_error_json(string body);
+  string analyze_json(string source_json, string operation, string input_json);
+  string analyze_json_with_platform(string source_json, string operation, string input_json, PlatformHost platform_host);
+};
